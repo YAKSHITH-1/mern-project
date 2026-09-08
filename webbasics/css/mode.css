@@ -1,0 +1,18 @@
+h1 {
+    color: aquamarine;
+
+
+}
+
+p {
+    margin: 20px;
+    border: 2px solid black;
+    box-shadow: 2em;
+    padding: 2em;
+    padding-bottom: 3em;
+    padding-top: 3em;
+    padding-left: 3em;
+    padding-right: 3em;
+
+
+}
