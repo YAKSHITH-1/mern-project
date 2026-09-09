@@ -2,7 +2,7 @@ export function Welcome() {
     return (
         <div>
             <center>
-                <h1>
+                <h1 >
                     Welcome to Student Management Portal
                 </h1>
                 <h2>

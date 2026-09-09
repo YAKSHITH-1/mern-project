@@ -1,11 +1,16 @@
-import { Welcome } from './Components/Welcome'
+import { Dashboard } from './Components/Dashboard'
 import './App.css'
 
-function App() {
+
+export default function App() {
 
   return (
-    <Welcome />
+    <>
+      <Dashboard />
+
+    </>
+
   )
 }
 
-export default App
+
