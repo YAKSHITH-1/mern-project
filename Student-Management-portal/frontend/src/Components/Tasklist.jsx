@@ -1,10 +1,11 @@
-export function Tasklist({ tasktitle, taskdesc, taskstatus }) {
+export function Tasklist(props) {
     return (
         <div className="task-card">
             <h2>Task list</h2>
-            <h3>{tasktitle}</h3>
-            <p>{taskdesc}</p>
-            <p>Status: {taskstatus}</p>
+            <h3>{props.tasktitle}</h3>
+            <p>{props.taskdesc}</p>
+            <p>Status: {props.taskstatus}</p>
+            <button onClick={props.onToggle}>Change Status</button>
         </div>
     );
 }
