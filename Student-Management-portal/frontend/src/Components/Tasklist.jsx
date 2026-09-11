@@ -6,6 +6,7 @@ export function Tasklist(props) {
             <p>{props.taskdesc}</p>
             <p>Status: {props.taskstatus}</p>
             <button onClick={props.onToggle}>Change Status</button>
+            <button onClick={props.onDelete}>Delete Task</button>
         </div>
     );
 }

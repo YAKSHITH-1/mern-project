@@ -5,6 +5,8 @@ import { Statcard } from './Statcard.jsx'
 import { Addtask } from './Addtask.jsx'
 import { useState } from 'react'
 
+import { DeleteTask } from './DeleteTask.jsx'
+
 
 export function Dashboard() {
 
@@ -31,8 +33,12 @@ export function Dashboard() {
         setTasks([...tasks, newtask])
     }
 
+    function handleDeleteTask(indexToDelete) {
+        setTasks(tasks.filter((_, index) => index !== indexToDelete));
+    }
+
     let tasksmap = tasks.map((task, index) => {
-        return <Tasklist key={index} tasktitle={task.tasktitle} taskdesc={task.taskdesc} taskstatus={task.taskstatus} onToggle={() => ToggleTask(index)} />
+        return <Tasklist key={index} tasktitle={task.tasktitle} taskdesc={task.taskdesc} taskstatus={task.taskstatus} onToggle={() => ToggleTask(index)} onDelete={() => handleDeleteTask(index)} />
     })
 
     return (
@@ -50,6 +56,7 @@ export function Dashboard() {
             </div>
             <div className="add-task-container">
                 <Addtask onAddtask={handleAddtask} />
+                <DeleteTask onDeletetask={handleDeleteTask} />
             </div>
         </>
     )
